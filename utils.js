@@ -31,3 +31,17 @@ export function renderRobots(robot) {
     div.append(h2, ul);
     return div;
 }
+
+export function renderCheatCodes(cheatCodes) {
+    const div = document.createElement('div');
+    const ul = document.createElement('ul');
+    const h2 = document.createElement('h2');
+    h2.textContent = 'CHEATS';
+    for (const codes of cheatCodes) {
+        const li = document.createElement('li');
+        li.textContent = codes;
+        ul.append(li);
+    }
+    div.append(h2,ul);
+    return div;
+}

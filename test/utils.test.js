@@ -1,8 +1,9 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 
+import { cheatCodes } from '../ezstrings.js';
 import { robots } from '../robots.js';
-import { renderAnimal, renderRobots } from '../utils.js';
+import { renderAnimal, renderCheatCodes, renderRobots } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -33,6 +34,19 @@ test('should return list with nested array lists', (expect) => {
     //Act
     // Call the function you're testing and set the result to a const
     const actual = renderRobots(robots[0]);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual.outerHTML, expected);
+});
+test('should return list of strings', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = `<div><h2>CHEATS</h2><ul><li>up</li><li>down</li><li>left</li><li>right</li></ul></div>`;
+
+    //Act
+    // Call the function you're testing and set the result to a const
+    const actual = renderCheatCodes(cheatCodes);
 
     //Expect
     // Make assertions about what is expected versus the actual result

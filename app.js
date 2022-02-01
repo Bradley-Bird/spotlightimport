@@ -6,6 +6,7 @@ console.log(animals);
 console.log(robots)
 const animalList = document.getElementById('animal-list');
 const robotList = document.getElementById('robotList');
+const codeList = document.getElementById('codeList')
 for (let animal of animals) {
     const div = renderAnimal(animal);
     animalList.append(div);
