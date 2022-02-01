@@ -1,12 +1,13 @@
 // import functions and grab DOM elements
 import { animals } from './animals.js';
 import { robots } from './robots.js';
-import { renderAnimal, renderRobots } from './utils.js';
+import { cheatCodes } from './ezstrings.js';
+import { renderAnimal, renderCheatCodes, renderRobots } from './utils.js';
 console.log(animals);
-console.log(robots)
+console.log(robots);
 const animalList = document.getElementById('animal-list');
 const robotList = document.getElementById('robotList');
-const codeList = document.getElementById('codeList')
+const codeList = document.getElementById('codeList');
 for (let animal of animals) {
     const div = renderAnimal(animal);
     animalList.append(div);
@@ -17,6 +18,8 @@ for (let robot of robots) {
     robotList.append(div);
 }
 
+const cheats = renderCheatCodes(cheatCodes);
+codeList.append(cheats);
 // let state
 
 // set event listeners
