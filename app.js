@@ -1,15 +1,20 @@
 // import functions and grab DOM elements
 import { animals } from './animals.js';
-import { renderAnimal } from './utils.js';
+import { robots } from './robots.js';
+import { renderAnimal, renderRobots } from './utils.js';
 console.log(animals);
+console.log(robots)
 const animalList = document.getElementById('animal-list');
 const robotList = document.getElementById('robotList');
 for (let animal of animals) {
     const div = renderAnimal(animal);
     animalList.append(div);
 }
+for (let robot of robots) {
+    const div = renderRobots(robot);
 
-
+    robotList.append(div);
+}
 
 // let state
 

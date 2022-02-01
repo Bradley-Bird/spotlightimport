@@ -9,7 +9,7 @@ const test = QUnit.test;
 test('renderAnimal should return a <div> with dog info', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<div class="animal"><h2>DOG</h2><img src="./assets/icons8-dog-100.png"><p>Mammal with 4 legs and a cuteness rating of 10.</p></div>`;
+    const expected = `<div class="animal"><h2>DOG</h2><p>Mammal with 4 legs and a cuteness rating of 10.</p></div>`;
 
     //Act
     // Call the function you're testing and set the result to a const
@@ -18,7 +18,6 @@ test('renderAnimal should return a <div> with dog info', (expect) => {
         numberOfLegs: 4,
         class: 'Mammal',
         cuteness: 10,
-        image: 'icons8-dog-100.png',
     });
 
     //Expect
