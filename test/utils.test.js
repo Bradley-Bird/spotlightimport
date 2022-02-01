@@ -2,6 +2,7 @@
 // import { example } from '../example.js';
 
 import { cheatCodes } from '../ezstrings.js';
+import { gameRatings } from '../games.js';
 import { robots } from '../robots.js';
 import { renderAnimal, renderCheatCodes, renderRobots } from '../utils.js';
 
@@ -52,3 +53,17 @@ test('should return list of strings', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.equal(actual.outerHTML, expected);
 });
+test('should return list of objects with objects in them', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = `<div class="gameRatings" id="gameRatings"><h2>Halo 3</h2><p>94%-Metacritic</p><p>9.5/10-Ign</p></div>`;
+
+    //Act
+    // Call the function you're testing and set the result to a const
+    const actual = renderGameRatings(gameRatings);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual.outerHTML, expected);
+});
+

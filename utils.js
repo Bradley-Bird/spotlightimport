@@ -42,6 +42,8 @@ export function renderCheatCodes(cheatCodes) {
         li.textContent = codes;
         ul.append(li);
     }
-    div.append(h2,ul);
+    div.append(h2, ul);
     return div;
 }
+
+export function renderGameRatings(gameRatings) {}

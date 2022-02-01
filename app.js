@@ -1,6 +1,7 @@
 // import functions and grab DOM elements
 import { animals } from './animals.js';
 import { robots } from './robots.js';
+import { gameRatings } from './games.js';
 import { cheatCodes } from './ezstrings.js';
 import { renderAnimal, renderCheatCodes, renderRobots } from './utils.js';
 console.log(animals);
