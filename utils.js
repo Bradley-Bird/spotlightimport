@@ -1,5 +1,3 @@
-import { gameRatings } from './games.js';
-
 export function renderAnimal(animal) {
     const div = document.createElement('div');
     div.classList.add('animal');
