@@ -32,7 +32,7 @@ body {
 
 .main {
     display: grid;
-    
+
     grid-template-areas:
         'one two'
         'three four';
@@ -47,9 +47,9 @@ div {
     gap: 2em;
     height: min-content;
     width: max-content;
-    
-    
-    
+
+
+
 
 }
 
@@ -73,7 +73,7 @@ div {
 
 .gameRatings {
     grid-area: four;
-    background: repeating-linear-gradient(blue,red,violet);
+    background: repeating-linear-gradient(blue, red, violet);
     color: white;
 }
 
