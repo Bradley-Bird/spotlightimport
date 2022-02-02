@@ -1,3 +1,5 @@
+import { gameRatings } from './games.js';
+
 export function renderAnimal(animal) {
     const div = document.createElement('div');
     div.classList.add('animal');
@@ -46,4 +48,19 @@ export function renderCheatCodes(cheatCodes) {
     return div;
 }
 
-export function renderGameRatings(gameRatings) {}
+export function renderGameRatings(game) {
+    const div = document.createElement('div');
+    div.classList.add('gameRatings');
+
+    const h2 = document.createElement('h2');
+    h2.textContent = game.game;
+
+    let p = document.createElement('p');
+    p.textContent = `${game.ratings.metacritic}-Metacritic`;
+
+    let p2 = document.createElement('p');
+    p2.textContent = `${game.ratings.ign}-Ign`;
+
+    div.append(h2, p, p2);
+    return div;
+}
